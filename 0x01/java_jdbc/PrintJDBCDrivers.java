@@ -2,7 +2,7 @@ import java.sql.Driver;
 import java.sql.DriverManager;
 import java.util.Enumeration;
 
-public class PrintJDBCDrives {
+public class PrintJDBCDrivers {
     public static void main(String[] args) {
         System.out.println("List of loaded JDBC drivers");
 
