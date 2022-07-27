@@ -6,6 +6,13 @@ public class ClienteTest {
     public static void main(String[] args) {
         String url = "jdbc:sqlite:sqlite_database_marco_2022.db";
 
+        // Deletando banco de dados se existir
+        try {
+            Files.deleteIfExists(Paths.get("sqlite_database_marco_2022.db"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         // 1) Criando o banco de dados
         ClienteDAOImpl clienteDAOImpl = new ClienteDAOImpl();
         clienteDAOImpl.connect(url);
