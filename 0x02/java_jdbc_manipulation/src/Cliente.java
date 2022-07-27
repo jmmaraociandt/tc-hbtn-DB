@@ -8,6 +8,14 @@ public class Cliente {
     public Cliente() {
     }
 
+    public Cliente(Integer id, String nome, Integer idade, String cpf, String rg) {
+        this.id = id;
+        this.nome = nome;
+        this.idade = idade;
+        this.cpf = cpf;
+        this.rg = rg;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -46,5 +54,16 @@ public class Cliente {
 
     public void setRg(String rg) {
         this.rg = rg;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", cpf='" + cpf + '\'' +
+                ", rg='" + rg + '\'' +
+                '}';
     }
 }
