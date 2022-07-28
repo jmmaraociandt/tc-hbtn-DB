@@ -1,9 +1,9 @@
-package com.techcamps.cadastros.demo;
+package demo;
 
-import com.techcamps.cadastros.entities.Pessoa;
-import com.techcamps.cadastros.entities.Produto;
-import com.techcamps.cadastros.models.PessoaModel;
-import com.techcamps.cadastros.models.ProdutoModel;
+import entities.Pessoa;
+import entities.Produto;
+import models.PessoaModel;
+import models.ProdutoModel;
 
 import java.io.IOException;
 import java.nio.file.Files;
