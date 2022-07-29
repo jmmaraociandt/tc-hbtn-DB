@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.*;
 
-public class GestaoCursoMain {
+public class GestaoCursosMain {
 
     public static void main(String[] args) {
         deleteDatabaseIfExists();
