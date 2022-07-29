@@ -11,16 +11,14 @@ public class MaterialCurso {
 
     private String url;
 
-    @OneToOne
-    @JoinColumn(name = "material_curso_id")
+    @OneToOne(mappedBy = "materialCurso")
     private Curso curso;
 
     public MaterialCurso() {
     }
 
-    public MaterialCurso(String url, Curso curso) {
+    public MaterialCurso(String url) {
         this.url = url;
-        this.curso = curso;
     }
 
     @Override

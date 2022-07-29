@@ -1,6 +1,6 @@
 package models;
 
-import com.techcamps.gestao.cursos.entities.Aluno;
+import entities.Aluno;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -41,7 +41,7 @@ public class AlunoModel implements AutoCloseable {
             } else
                 System.out.println("Student not found!");
         } catch (Exception e) {
-            System.err.println("Error to create a student! " + e.getMessage());
+            System.err.println("Error to update a student! " + e.getMessage());
         }
     }
 
@@ -74,7 +74,7 @@ public class AlunoModel implements AutoCloseable {
             } else
                 System.out.println("Student not found!");
         } catch (Exception e) {
-            System.err.println("Error to create a student! " + e.getMessage());
+            System.err.println("Error to delete a student! " + e.getMessage());
         }
     }
 

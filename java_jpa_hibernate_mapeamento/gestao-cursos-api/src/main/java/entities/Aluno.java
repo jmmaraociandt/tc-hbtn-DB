@@ -14,7 +14,6 @@ public class Aluno {
     @Column(name = "nome_completo")
     private String nomeCompleto;
     private String matricula;
-
     private LocalDate nascimento;
     private String email;
 
@@ -28,9 +27,9 @@ public class Aluno {
     private Set<Telefone> telefones;
 
     public Aluno() {
-        cursos = new HashSet<>();
-        enderecos = new HashSet<>();
-        telefones = new HashSet<>();
+        this.cursos = new HashSet<>();
+        this.enderecos = new HashSet<>();
+        this.telefones = new HashSet<>();
     }
 
     public Aluno(String nomeCompleto, String matricula, LocalDate nascimento, String email) {
@@ -38,80 +37,24 @@ public class Aluno {
         this.matricula = matricula;
         this.nascimento = nascimento;
         this.email = email;
+        this.cursos = new HashSet<>();
+        this.enderecos = new HashSet<>();
+        this.telefones = new HashSet<>();
     }
 
-    public Aluno(String nomeCompleto, String matricula, LocalDate nascimento, String email, Set<Curso> cursos, Set<Endereco> enderecos, Set<Telefone> telefones) {
-        this.nomeCompleto = nomeCompleto;
-        this.matricula = matricula;
-        this.nascimento = nascimento;
-        this.email = email;
-        this.cursos = cursos;
-        this.enderecos = enderecos;
-        this.telefones = telefones;
-    }
-
-    public Aluno(Long id, String nomeCompleto, String matricula, LocalDate nascimento, String email, Set<Endereco> enderecos, Set<Telefone> telefones) {
+    public Aluno(Long id, String nomeCompleto, String matricula, LocalDate nascimento, String email) {
         this.id = id;
         this.nomeCompleto = nomeCompleto;
         this.matricula = matricula;
         this.nascimento = nascimento;
         this.email = email;
-        this.enderecos = enderecos;
-        this.telefones = telefones;
-    }
-
-    //TODO DELETAR
-    public Aluno(String nomeCompleto, String matricula, LocalDate nascimento, String email, Set<Endereco> enderecos, Set<Telefone> telefones) {
-        this.nomeCompleto = nomeCompleto;
-        this.matricula = matricula;
-        this.nascimento = nascimento;
-        this.email = email;
-        this.enderecos = enderecos;
-        this.telefones = telefones;
-    }
-
-    public Aluno(String nomeCompleto, String matricula, LocalDate nascimento, String email, Set<Curso> cursos) {
-        this.nomeCompleto = nomeCompleto;
-        this.matricula = matricula;
-        this.nascimento = nascimento;
-        this.email = email;
-        this.cursos = cursos;
+        this.cursos = new HashSet<>();
+        this.enderecos = new HashSet<>();
+        this.telefones = new HashSet<>();
     }
 
     public Long getId() {
         return id;
-    }
-
-    public String getNomeCompleto() {
-        return nomeCompleto;
-    }
-
-    public void setNomeCompleto(String nomeCompleto) {
-        this.nomeCompleto = nomeCompleto;
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
-
-    public LocalDate getNascimento() {
-        return nascimento;
-    }
-
-    public void setNascimento(LocalDate nascimento) {
-        this.nascimento = nascimento;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public Set<Curso> getCursos() {
@@ -141,9 +84,9 @@ public class Aluno {
     @Override
     public String toString() {
         return "#" + id +
-                " [" + nomeCompleto +
-                "] " + matricula +
-                " | Birth date: " + nascimento +
+                " " + nomeCompleto +
+                " [" + matricula +
+                "]\tBirth date: " + nascimento +
                 "\n\tCourses: \n\t   " + cursos +
                 "\n\tContacts:\n\t   email: " + email +
                 "\n\t   Adress: " + enderecos +

@@ -20,14 +20,14 @@ public class Professor {
     private Set<Curso> cursos;
 
     public Professor() {
-        cursos = new HashSet<>();
+        this.cursos = new HashSet<>();
     }
 
-    public Professor(String nomeCompleto, String matricula, String email, Set<Curso> cursos) {
+    public Professor(String nomeCompleto, String matricula, String email) {
         this.nomeCompleto = nomeCompleto;
         this.matricula = matricula;
         this.email = email;
-        this.cursos = cursos;
+        this.cursos = new HashSet<>();
     }
 
     @Override

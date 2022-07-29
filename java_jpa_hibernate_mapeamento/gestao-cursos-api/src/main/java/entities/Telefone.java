@@ -24,6 +24,16 @@ public class Telefone {
         this.numero = numero;
     }
 
+    public Telefone(String ddd, String numero, Aluno aluno) {
+        this.ddd = ddd;
+        this.numero = numero;
+        this.aluno = aluno;
+    }
+
+    public Aluno getAluno() {
+        return aluno;
+    }
+
     public void setAluno(Aluno aluno) {
         this.aluno = aluno;
     }
